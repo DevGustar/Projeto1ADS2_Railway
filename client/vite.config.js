@@ -13,6 +13,6 @@ export default defineConfig({
   preview: {
     port: process.env.PORT || 8080,
     host: true,
-    allowedHosts: ['clientinstitutocriativo-production.up.railway.app'],
+    allowedHosts: ['client-institutocriativo.up.railway.app'],
   },
 });
