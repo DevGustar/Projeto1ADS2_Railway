@@ -1,13 +1,18 @@
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 
-// https://vitejs.dev/config/
+// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
   publicDir: "./static",
   base: "./",
   server: {
-    port: 5173,
+    port: process.env.PORT || 5173,
     host: true,
+  },
+  preview: {
+    port: process.env.PORT || 8080,
+    host: true,
+    allowedHosts: ['clientinstitutocriativo-production.up.railway.app'],
   },
 });
