@@ -7,7 +7,7 @@
   </a>
 </p>
 
-## 🧠 Projeto
+## 🧠 ProjetoAAA
 
 ### **Gestão de Eventos para o Instituto Criativo**
 
