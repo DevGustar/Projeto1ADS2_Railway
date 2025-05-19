@@ -70,7 +70,7 @@ export const Signup_ADM = () => {
     try {
       console.log("Enviando para a API:", formData);
 
-      const response = await axios.post('http://localhost:3000/api/admin', formData);
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/admin`, formData);
 
       setMessage('Cadastro realizado com sucesso!');
       console.log('Cadastro:', response.data);

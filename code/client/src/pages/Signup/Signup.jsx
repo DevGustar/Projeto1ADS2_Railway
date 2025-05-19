@@ -59,7 +59,7 @@ export const Signup = () => {
         senha,
       });
 
-      const response = await axios.post('http://localhost:3000/api/usuario', {
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/usuario`, {
         nome_usuario,
         sobrenome_usuario,
         telefone,

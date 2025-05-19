@@ -14,7 +14,7 @@ export const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3000/api/usuario/login', {
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/usuario/login`, {
         email,
         senha,
       });
@@ -35,13 +35,13 @@ export const Login = () => {
     <div className="login-container">
       {/* Logo simples - substitua pela sua */}
       <div className="login-logo">
-          <Link to="/homepage">
-            <img
-              className="login-logo"
-              src={logoIC}
-              alt="Logo Instituto Criativo"
-            />
-          </Link>
+        <Link to="/homepage">
+          <img
+            className="login-logo"
+            src={logoIC}
+            alt="Logo Instituto Criativo"
+          />
+        </Link>
       </div>
 
       <form onSubmit={handleLogin}>
