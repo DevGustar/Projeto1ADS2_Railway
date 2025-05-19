@@ -8,18 +8,17 @@
 
 ## 🧠 Projeto
 
-### **Gestão de Eventos para o Instituto Criativo**
+### **Dashboard de Eventos para o Instituto Criativo**
 
-## 👨‍💻 Equipe `TechTeam`
+## 👨‍💻 Equipe: `TechTeam`
 
 | Nome                 | Perfil                                                              |
 |----------------------|---------------------------------------------------------------------|
 | Eriane Dias          | [LinkedIn](https://www.linkedin.com/in/eriane-dos-santos-oliveira-cfp-pqo-paap-53116292/) |
-| Gustavo Roberto      | [GitHub](https://github.com/DevGustar)                              |
+| Gustavo Roberto      | [LinkedIn](https://www.linkedin.com/in/gustavo-roberto-0aa488288/)                              |
 | Gustavo Henrique     | [LinkedIn](https://www.linkedin.com/in/gustavo-henrique-da-silva-santos-453822326?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app) |
 | Lucas Alves          | [LinkedIn](https://www.linkedin.com/in/lucas-alves-bernardo-093871252?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)|
 | Vitor Santos         | [LinkedIn](https://github.com/vs7black)|
-
 
 ## 👨‍🏫 Orientadores
 
@@ -43,12 +42,12 @@ Para resolver esse problema, desenvolvemos uma aplicação completa com dashboar
 - Integração com redes sociais (futuramente)
 
 > 🧰 Tecnologias utilizadas:
-> - Backend: `.NET (C#)`
+> - Backend: `Express + JavaScript`
 > - Frontend: `React`
 > - Banco de Dados: `MySQL`
 
 <p align="center">
-  <img src="images/interacao_descontraida.jpg" alt="Interação entre pessoas" width="1000px">
+  <img src="/code/client/src/pages/Homepage/interacao_descontraida.jpg" alt="Interação entre pessoas" width="30px">
 </p>
 
 ## 📁 Estrutura do Projeto
