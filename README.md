@@ -47,7 +47,7 @@ Para resolver esse problema, desenvolvemos uma aplicação completa com dashboar
 > - Banco de Dados: `MySQL`
 
 <p align="center">
-  <img src="/code/client/src/pages/Homepage/interacao_descontraida.jpg" alt="Interação entre pessoas" width="30px">
+  <img src="/code/client/src/pages/Homepage/interacao_descontraida.jpg" alt="Interação entre pessoas" width="1000px">
 </p>
 
 ## 📁 Estrutura do Projeto
