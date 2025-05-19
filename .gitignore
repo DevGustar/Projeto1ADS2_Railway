@@ -43,5 +43,4 @@ test-results/
 # Outros
 *.local
 .cache/
-dist/
 out/

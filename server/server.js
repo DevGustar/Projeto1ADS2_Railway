@@ -12,9 +12,6 @@ app.use(express.json())
 app.use("/api", routes)
 app.use("/", express.static("public"))
 
-
-
-
 //Conexão
 app.listen(port, ()=> {
     console.log(`Servidor rodando em: http://localhost:${port}`)
