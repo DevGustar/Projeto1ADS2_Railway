@@ -1,137 +1,170 @@
+/* Base */
 body {
     margin: 0;
+    padding-top: 0px;
     padding-bottom: 100px;
-  
-    box-sizing: border-box;
-   
+    background-color: #f2f4f8;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
 }
 
 .container {
-    padding-top:50px;
     display: flex;
-    width: 100%;
     justify-content: center;
+    width: 100%;
 }
 
 .conteudo {
     display: flex;
     flex-direction: column;
     width: 95%;
-    max-width: 1200px;
-
+    max-width: 1300px;
+    gap: 30px;
 }
 
-/* TOPO - Cartões */
+/* Cartões */
 .miniretangulo {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-.miniretangulo div {
-    flex: 1 1 22%;
-    background: #fff;
-    border: 1px solid #D6D6D6;
-    border-radius: 16px;
-    padding: 20px;
-    text-align: center;
-}
-
-.miniretangulo span {
-    display: block;
-    font-size: 20px;
-}
-
-.Separador{
-    background: #fff;
-    border: 1px solid #D6D6D6;
-    border-radius: 16px;
-    text-align: center;
-    padding: 20px;
-    width: 100%;
-}
-.Separador span{
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.Quantia {
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.Descricao {
-    font-size: 14px;
-    color: #666;
-}
-
-/* MEIO - Tabelas */
-.Tabelas {
     display: flex;
     justify-content: space-between;
     gap: 20px;
     flex-wrap: wrap;
 }
 
-.participantes {
-    flex: 1 1 48%;
+.miniretangulo div {
+    flex: 1 1 22%;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease;
+}
+
+.miniretangulo div:hover {
+    transform: translateY(-4px);
+}
+
+.miniretangulo span {
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    color: #444;
+}
+
+.Quantia {
+    font-size: 28px;
+    font-weight: bold;
+    color: #1a73e8;
+}
+
+.Descricao {
+    font-size: 14px;
+    color: #777;
+}
+
+/* Separador */
+.Separador {
     background: #fff;
-    border: 1px solid #D6D6D6;
     border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    text-align: center;
+}
+
+.Separador span {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Tabelas */
+.Tabelas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.participantes {
+    flex: 1 1 100%;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
     overflow-x: auto;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
+    font-size: 15px;
 }
 
-th, td {
-    padding: 10px;
+th {
     text-align: left;
+    padding: 12px 10px;
+    background: #f0f0f0;
+    color: #333;
+    font-weight: 600;
+}
+
+td {
+    padding: 10px;
     border-bottom: 1px solid #eee;
 }
 
-/* BASE - Gráfico */
+/* Gráficos */
 .ContainerVertical {
-    padding: 10px;
-    width: 100%;
     display: flex;
     flex-direction: column;
+    gap: 20px;
+    width: 100%;
 }
 
-.Grafico {
+.Grafico,
+.GraficoJunto {
     display: flex;
-    padding: 10px;
-    justify-content: space-between; 
-}
-.Grafico .Espaço{
-    background: #fff;
-    border: 1px solid #D6D6D6;
-    border-radius: 16px;
-}
-.GraficoJunto {    
-    display: flex;
-    padding: 10px;
-    justify-content:center;
-    background: #fff;
-    border: 1px solid #D6D6D6;
-    border-radius: 16px;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
+.Grafico .Espaço,
+.GraficoJunto .EspaçoJunto {
+    flex: 1 1 48%;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
 
-/* RESPONSIVO */
+/* Formulário */
+.form-section {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.form-section h3 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #1a1a1a;
+}
+
+/* Responsivo */
 @media (max-width: 768px) {
-    .miniretangulo div {
+    .miniretangulo div,
+    .Grafico .Espaço,
+    .GraficoJunto .EspaçoJunto {
         flex: 1 1 100%;
     }
 
-    .Tabelas {
+    .Tabelas,
+    .GraficoJunto {
         flex-direction: column;
     }
 
-    .participantes {
-        flex: 1 1 100%;
+    .conteudo {
+        gap: 20px;
     }
 }

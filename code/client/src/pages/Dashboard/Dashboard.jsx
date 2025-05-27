@@ -9,9 +9,19 @@ import PolarAreaCharts from "../../features/PolarAreaCharts/PolarAreaCharts";
 import BarChart from "../../features/BarChart/BarChart";
 import RealTimeChart from "../../features/RealTimeChart/RealTimeChart";
 
+
+
+
 // Componentes reutilizáveis
 import Card from "../../components/Card/Card";
 import FormParticipante from "../../components/FormParticipante/FormParticipante";
+import ValorTipoEvento from "../../components/Card/CardValores";
+import TotalEventosCard from "../../components/Card/TotalEventos";
+
+
+
+
+
 const Dashboard = () => {
   const [participantes, setParticipantes] = useState([]);
 
@@ -25,16 +35,14 @@ const Dashboard = () => {
 
         <div className="miniretangulo">
           <Card title="Participantes" value="150" />
-          <Card title="Eventos" value="12" />
+          <TotalEventosCard />
           <Card title="Organizadores" value="37" />
           <Card title="Inscrições" value="89" />
         </div>
 
-        <div className="form-section">
-          <div> || AREA DE TESTE || Teste Card </div>
+        {/* <div className="form-section">
           <h3>Adicionar Participante</h3>
-          <FormParticipante onAdd={adicionarParticipante} />
-        </div>
+        </div>*/}
 
         <div className="participantes">
           <table>
@@ -54,36 +62,27 @@ const Dashboard = () => {
             </tbody>
           </table>
         </div>
-        <div> FIM AREA DE TESTE</div>
 
         <div className="ContainerVertical">
           <div className="Grafico">
-            <div className="Espaço"><ApexChart /></div>
-            <div className="Espaço"><ApexChart /></div>
-            <div className="Espaço"><ApexChart /></div>
-            <div className="Espaço"><ApexChart /></div>
           </div>
 
           <div className="GraficoJunto">
             <div className="EspaçoJunto"><PolarAreaCharts /></div>
             <div className="EspaçoJunto"><BarChart /></div>
-          </div>
-        </div>
-
-        <div className="Separador">
-          <span>Monetario</span>
-        </div>
-
-        <div className="ContainerVertical">
-          <div className="GraficoJunto">
-            <RealTimeChart />
+            <div className="EspaçoJunto"><RealTimeChart /></div>
           </div>
         </div>
 
         <div className="miniretangulo">
-          <Card title="Doação" value="R$ 1.500.000" />
-          <Card title="Palestra" value="R$ 500.000" />
-          <Card title="Terapia" value="R$ 2.000.000" />
+
+
+          <div className="miniretangulo">
+            <ValorTipoEvento tipo="palestra" />
+            <ValorTipoEvento tipo="doacao" />
+            <ValorTipoEvento tipo="terapia" />
+          </div>
+
         </div>
       </div>
     </div>

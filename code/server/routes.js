@@ -5,6 +5,20 @@ const router = express.Router()
 
 //#region ROTAS USUÁRIO
 
+
+
+
+router.get('/dataeventos', async (req, res) => {
+    try {
+        const [rows] = await db.execute('SELECT * FROM eventos');
+        res.json(rows);
+    } catch (error) {
+        console.error('Erro ao buscar eventos:', error);
+        res.status(500).json({ error: 'Erro ao buscar eventos' });
+    }
+});
+
+
 //#region CREATE USUÁRIO
 router.post("/usuario", async (req, res) => {
     try {

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import ReactApexChart from 'react-apexcharts';
 
-const XAXIS_RANGE = 10000;
+const XAXIS_RANGE = 9000;
 
 const generateNewPoint = (lastDate, range) => {
   const newDate = lastDate + 1000;
@@ -36,15 +36,15 @@ const ApexChart = () => {
   // Atualização dinâmica
   useEffect(() => {
     const interval = setInterval(() => {
-      const newPoint1 = generateNewPoint(lastDate, { min: 10, max: 90 });
-      const newPoint2 = generateNewPoint(lastDate, { min: 20, max: 70 });
-      const newPoint3 = generateNewPoint(lastDate, { min: 30, max: 60 });
+      const newPoint1 = generateNewPoint(lastDate, { min: 10, max: 100000 });
+      const newPoint2 = generateNewPoint(lastDate, { min: 20, max: 50000 });
+      const newPoint3 = generateNewPoint(lastDate, { min: 30, max: 200000 });
 
       setSeries1((prev) => [...prev.slice(1), newPoint1]);
       setSeries2((prev) => [...prev.slice(1), newPoint2]);
       setSeries3((prev) => [...prev.slice(1), newPoint3]);
       setLastDate(newPoint1.x);
-    }, 500);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, [lastDate]);
@@ -59,7 +59,7 @@ const ApexChart = () => {
         enabled: true,
         easing: 'linear',
         dynamicAnimation: {
-          speed: 1000
+          speed: 2000
         }
       },
       toolbar: {
@@ -78,7 +78,7 @@ const ApexChart = () => {
       curve: 'smooth'
     },
     title: {
-      text: 'Dynamic Updating Chart (2 Séries)',
+      text: 'Valor Arrecadado Por Evento Por Mês',
       align: 'left'
     },
     markers: {
@@ -89,7 +89,7 @@ const ApexChart = () => {
       range: XAXIS_RANGE
     },
     yaxis: {
-      max: 100
+      max: 200000
     },
     legend: {
       show: true
@@ -105,7 +105,7 @@ const ApexChart = () => {
 
   return (
     <div id="chart">
-      <ReactApexChart options={options} series={series} type="line" height={450}  width={1000}/>
+      <ReactApexChart options={options} series={series} type="line" height={250}  width={1200}/>
     </div>
   );
 };

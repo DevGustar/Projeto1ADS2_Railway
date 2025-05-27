@@ -10,7 +10,7 @@ const BarChart = () => {
         options: {
             chart: {
                 type: 'bar',
-                height: 150,
+                height: 200,
             },
             plotOptions: {
                 bar: {
@@ -30,7 +30,7 @@ const BarChart = () => {
                 offsetY: 0,
                 floating: false,
                 style: {
-                    fontSize: '20px',
+                    fontSize: '10px',
                     fontWeight: 'bold',
                     fontFamily: undefined,
                     color: '#263238'
@@ -67,7 +67,7 @@ const BarChart = () => {
                 options={state.options}
                 series={state.series}
                 type="bar"
-                width={500}
+                width={580}
             />
         </div>
     )

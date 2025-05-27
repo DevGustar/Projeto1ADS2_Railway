@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactApexChart from 'react-apexcharts';
+import '../../../../server/DataGet.js';
 
 
-const ApexChart = () => {
+const ApexChart = (Valor1, Valor2, Valor3) => {
   const [state, setState] = React.useState({
     name: 'ApexChart',
-    series: [252, 205, 102],
+    series: [10, 205, 102],
     options: {
       chart: {
         width: 480,
