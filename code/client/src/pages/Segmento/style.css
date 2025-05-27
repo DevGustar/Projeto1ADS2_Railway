@@ -51,7 +51,7 @@
 /* Grade de cards responsiva */
 .segmento-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
   gap: 6.5rem;
   max-width: 1200px;
   margin: 4rem auto;
@@ -121,9 +121,9 @@
 
 /* Ícone circular à esquerda */
 .segmento-icon-wrapper {
-  margin-top: -50px;
+  margin-top: -40px;
   background-color: #ffffff;
-  margin-left: 190px;
+  margin-left: 250px;
   border-radius: 50%;
   padding: 12px;
   width: 60px;
@@ -207,7 +207,7 @@
 
 .segmento-faixa {
   display: block;
-  margin: 0.3rem;
+  margin: 1.3rem;
   color: #FF254A;
   font-weight: bold;
 }

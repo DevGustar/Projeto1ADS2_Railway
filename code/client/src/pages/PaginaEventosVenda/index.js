@@ -1,0 +1,1 @@
+export { PaginaEventosVenda } from "./PaginaEventosVenda";

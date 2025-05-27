@@ -10,9 +10,9 @@ import { Footer } from "../../components/footer/footer";
 import img0 from "./img/Frame 2.png";
 import img1Static from "./img/criancas-aprendendo.png";
 import img1Gif from "./img/criancas-aprendendo.gif";
-import img2Static from "./img/homem-de-meia-idade.jpg";
+import img2Static from "./img/recolocacao.png";
 import img2Gif from "./img/GIF-homem-de-meia-idade.gif";
-import img3Static from "./img/modelo-masculino-elegante-hipster.jpg"
+import img3Static from "./img/bem-estar.png"
 import img3Gif from "./img/modelo-masculino-elegante-hipster.gif";
 import img4Static from "./img/jovem-trabalhando.png";
 import img4Gif from "./img/jovem-trabalhando.gif";

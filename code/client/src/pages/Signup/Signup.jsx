@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import logoIC from "./Logo_TextoBranco.svg";
 import axios from 'axios';
+import "./signup.css";
 
 export const Signup = () => {
   const [nome_usuario, setNome] = useState('');
@@ -59,7 +62,7 @@ export const Signup = () => {
         senha,
       });
 
-      const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/usuario`, {
+      const response = await axios.post('http://localhost:3000/api/usuario', {
         nome_usuario,
         sobrenome_usuario,
         telefone,
@@ -68,9 +71,12 @@ export const Signup = () => {
         senha,
       });
 
-      setId(response.data.id);
+      setId(response.data.usuario.id);
       setMessage('Cadastro realizado com sucesso!');
       console.log('Cadastro:', response.data);
+
+      // ✅ Salva no LocalStorage
+      localStorage.setItem('usuario', JSON.stringify(response.data.usuario));
 
       // ✅ Exibe um alerta e redireciona para a página inicial
       window.alert("Cadastro realizado com sucesso!");
@@ -83,6 +89,15 @@ export const Signup = () => {
 
   return (
     <div className="signup-container">
+    <div className="signup-logo">
+        <Link to="/homepage">
+          <img
+            className="signup-logo"
+            src={logoIC}
+            alt="Logo Instituto Criativo"
+          />
+        </Link>
+      </div>
       <h2>Criar Conta</h2>
       <form onSubmit={Cadastro}>
         <input
@@ -101,7 +116,7 @@ export const Signup = () => {
         />
         <input
           type="tel"
-          placeholder="Telefone"
+          placeholder="Telefone (00000-0000)"
           value={telefone}
           onChange={(e) => setTelefone(e.target.value)}
           required
@@ -128,9 +143,14 @@ export const Signup = () => {
           required
         />
         <button type="submit">Cadastrar</button>
+         {message && <p className="error-message">{message}</p>}
+
+        <div className="links">
+          <Link to="/login">Já tenho uma conta</Link>
+          <a href="#politica">Política de privacidade</a>
+        </div>
       </form>
 
-      {message && <p>{message}</p>}
     </div>
   );
 };

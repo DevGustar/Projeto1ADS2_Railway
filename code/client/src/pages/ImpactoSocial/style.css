@@ -1,7 +1,6 @@
 /* Container principal da seção de impacto */
 .impact-section {
   padding: 60px 20px;
-  background-color: #fff0f4;
   text-align: center;
 }
 
@@ -17,11 +16,11 @@
 
 /* Grade de estatísticas */
 .stats-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  display: flex;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1.5fr));
   gap: 30px;
   justify-items: center;
-  margin-bottom: 60px;
+  margin: 70px;
 }
 
 /* Cada bloco de estatística */
@@ -49,7 +48,7 @@
 /* Valor estatístico */
 .stat-value {
   font-size: 2rem;
-  color: #f12929;
+  color: #5f5757;
   margin: 10px 0;
   font-weight: 700;
 }

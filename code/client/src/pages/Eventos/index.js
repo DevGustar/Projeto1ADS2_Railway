@@ -1,1 +1,0 @@
-export { Eventos } from "./Eventos";

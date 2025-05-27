@@ -34,7 +34,9 @@ export const Header = () => {
           <Link to="/colaboradores" onClick={() => setMenuOpen(false)}>Colaboradores</Link>
           <Link to="/impacto-social" onClick={() => setMenuOpen(false)}>Impacto Social</Link>
           <Link to="/marcas" onClick={() => setMenuOpen(false)}>Marcas</Link>
-          <Link to="/dashboard" onClick={() => setMenuOpen(false)}>Dashboard</Link>
+          <Link to="/paginaeventosvenda" onClick={() => setMenuOpen(false)}>Eventos</Link>
+          <Link to="/paginaeventos" onClick={() => setMenuOpen(false)}>Ger-Eventos</Link>
+           <Link to="/dashboard" onClick={() => setMenuOpen(false)}>Dashboard</Link>
           <Link to="/signup_adm" onClick={() => setMenuOpen(false)}>ADM</Link>
 
           <a href="#"><button className="donate-button">Doar</button></a>

@@ -6,6 +6,13 @@
 ```
 npm install
 ```
+npm install react-apexcharts apexcharts
+
+````
+npm install react-icons
+
+```
+npm install recharts
 
 ```
 npm run dev

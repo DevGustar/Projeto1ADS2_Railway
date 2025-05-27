@@ -5,7 +5,9 @@ import "./style.css";
 import { Header } from "../../components/Header/Header";
 import { Footer } from "../../components/footer/footer";
 import { ActionButton } from "../../components/ActionButton/ActionButton";
-import maisIcon from "./plus-solid.svg"; 
+import maisIcon from "./plus-solid.svg";
+import criancas1 from "./foto_criancaas-2.jpg"; 
+import criancas2 from "./foto_lucy.jpg"; 
 
 export const ImpactoSocial = () => {
   return (
@@ -46,12 +48,12 @@ export const ImpactoSocial = () => {
 
   <div className="images-row">
     <img
-      src="https://placehold.co/455x408"
+      src= {criancas1}
       alt="Imagem 1"
       className="impact-img"
     />
     <img
-      src="https://placehold.co/310x292"
+      src={criancas2}
       alt="Imagem 2"
       className="impact-img"
     />
