@@ -1,3 +1,1 @@
-
 export { PaginaEventosVenda } from "./PaginaEventosVenda";
-

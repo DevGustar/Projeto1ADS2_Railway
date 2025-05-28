@@ -1,4 +1,7 @@
 import React from 'react';
+
+
+import { useNavigate } from 'react-router-dom';
 import { Header } from "../../components/Header/Header";
 import Banner1 from "./img/Banner1.png";
 import Banner2 from "./img/Banner2.png";
@@ -9,6 +12,10 @@ import Panfleto4 from "./img/Panfleto4.png";
 import Panfleto5 from "./img/Panfleto5.png";
 
 import "./styles.css";
+
+
+
+
 
 // Dados dos eventos
 const eventos = [
@@ -23,8 +30,8 @@ const eventos = [
     id: i + 1,
     tipo: "evento",
     titulo: [`Workshop de Entrevistas`, `Técnicas de Entrevista`, `Feira de Ciências`, `Mentoria para Jovens `, `Oficina de Meditação`, `Workshop de Comunicação`][i % 6],
-    descricao: [`Evento sobre "Networking Estratégico`, `Entrevistas de Emprego: Dicas e Simulações`, `Matemática Divertida: Jogos e Desafios`,`Aventuras em Ciências: Experimentos Interativos`,`Meditação Guiada para Iniciantes ao ar livre`, `Comunicação Profissional para Jovens`][i % 6],
-    imagem: [Panfleto1, Panfleto2, Panfleto3, Panfleto4, Panfleto5, Panfleto1, Panfleto2, Panfleto3, Panfleto4, Panfleto5,  Panfleto2, Panfleto1, Panfleto2, Panfleto3, Panfleto4, Panfleto5][i + 1],
+    descricao: [`Evento sobre "Networking Estratégico`, `Entrevistas de Emprego: Dicas e Simulações`, `Matemática Divertida: Jogos e Desafios`, `Aventuras em Ciências: Experimentos Interativos`, `Meditação Guiada para Iniciantes ao ar livre`, `Comunicação Profissional para Jovens`][i % 6],
+    imagem: [Panfleto1, Panfleto2, Panfleto3, Panfleto4, Panfleto5, Panfleto1, Panfleto2, Panfleto3, Panfleto4, Panfleto5, Panfleto2, Panfleto1, Panfleto2, Panfleto3, Panfleto4, Panfleto5][i + 1],
     classificacao: ["L", "10", "12", "14", "16", "18"][i % 6],
     data: `0${(i % 9) + 1}/06/2025`,
     horarios: ["10:00", "13:30", "16:00", "19:00", "22:00"].slice(0, (i % 3) + 1),
@@ -41,17 +48,18 @@ const eventos = [
 ];
 
 export const PaginaEventosVenda = () => {
+  const navigate = useNavigate();
   return (
     <div className="cinemark-theme">
       <Header />
-      
+
       {/* Banner Principal */}
       <section className="main-banner">
         <a href={eventos[0].link}>
           <img src={eventos[0].imagem} alt={eventos[0].alt} />
         </a>
       </section>
-      
+
       <div className="ev-container">
         {/* Filtros */}
         <div className="ev-filters">
@@ -77,7 +85,7 @@ export const PaginaEventosVenda = () => {
             </select>
           </div>
         </div>
-        
+
         {/* Grade de Eventos */}
         <div className="events-grid">
           {eventos.slice(1, -1).map((evento) => (
@@ -103,19 +111,28 @@ export const PaginaEventosVenda = () => {
                     ))}
                   </div>
                 </div>
-                <a href="#" className="buy-button">Comprar</a>
+<button
+  className="buy-button"
+  onClick={() => navigate('/PaginaCompraIngresso', { state: { evento } })}
+>
+  Comprar
+</button>
+
+
               </div>
             </div>
           ))}
         </div>
-        
+
         {/* Banner Promocional */}
         <section className="promo-banner">
-          <a href={eventos[eventos.length-1].link}>
-            <img src={eventos[eventos.length-1].imagem} alt={eventos[eventos.length-1].alt} />
+          <a href={eventos[eventos.length - 1].link}>
+            <img src={eventos[eventos.length - 1].imagem} alt={eventos[eventos.length - 1].alt} />
           </a>
         </section>
       </div>
     </div>
   );
 };
+
+export default PaginaEventosVenda;

@@ -1,3 +1,1 @@
-export { PaginaEventosCompra } from "./PaginaCompraIngresso";
-
-
+export { PaginaCompraIngresso } from './PaginaCompraIngresso';

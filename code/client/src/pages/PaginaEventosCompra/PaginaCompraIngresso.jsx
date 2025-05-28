@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { Header } from "../../components/Header/Header";
 import "./styles-compra.css";
 
-export const PaginaCompraIngresso = () => {
+const PaginaCompraIngresso = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const { evento } = location.state || {};
@@ -319,3 +319,6 @@ export const PaginaCompraIngresso = () => {
     </div>
   );
 };
+
+export default PaginaCompraIngresso;
+export { PaginaCompraIngresso };
