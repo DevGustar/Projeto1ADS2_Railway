@@ -1,7 +1,5 @@
 import React from 'react';
 import ReactApexChart from 'react-apexcharts';
-import '../../../../server/DataGet.js';
-
 
 const ApexChart = (Valor1, Valor2, Valor3) => {
   const [state, setState] = React.useState({
