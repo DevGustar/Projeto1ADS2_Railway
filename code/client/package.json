@@ -8,12 +8,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vite",
     "build": "vite build",
-    "start": "vite preview --port $PORT"
+    "start": "vite preview --port $PORT --host"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "dependencies": {
     "apexcharts": "^4.7.0",
     "axios": "^1.9.0",

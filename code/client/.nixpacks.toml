@@ -1,0 +1,2 @@
+[serve]
+command = "vite preview --port $PORT --host"
