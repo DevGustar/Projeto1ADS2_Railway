@@ -2,9 +2,6 @@ import "./Dashboard.css";
 import React, { useState } from 'react';
 
 // Importa os gráficos de belezuras
-import ApexChart from "../../features/PieChart/PieChart";
-import TreeMap from "../../features/TreeMap/TreeMap";
-import HeatMap from "../../features/HeatMap/HeatMap";
 import PolarAreaCharts from "../../features/PolarAreaCharts/PolarAreaCharts";
 import BarChart from "../../features/BarChart/BarChart";
 import RealTimeChart from "../../features/RealTimeChart/RealTimeChart";
@@ -14,7 +11,6 @@ import RealTimeChart from "../../features/RealTimeChart/RealTimeChart";
 
 // Componentes reutilizáveis
 import Card from "../../components/Card/Card";
-import FormParticipante from "../../components/FormParticipante/FormParticipante";
 import ValorTipoEvento from "../../components/Card/CardValores";
 import TotalEventosCard from "../../components/Card/TotalEventos";
 
