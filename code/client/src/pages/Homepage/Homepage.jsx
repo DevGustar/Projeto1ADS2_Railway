@@ -90,23 +90,8 @@ export const Homepage = () => {
           <div className="carrossel-container">
             <button className="seta esquerda">&#8249;</button>
             <div className="carrossel">
-              <div className="card-evento">
-                <img src={exemplo2} alt="Evento 2" />
-                <h3 className="nome-evento">Festival XYZ</h3>
-                <p className="info-evento">São Paulo • 22 Jun 2025</p>
-              </div>
-
-              <div className="card-evento">
-                <img src={exemplo3} alt="Evento 3" />
-                <h3 className="nome-evento">Show ABC</h3>
-                <p className="info-evento">Rio de Janeiro • 10 Jul 2025</p>
-              </div>
-
-              <div className="card-evento">
-                <img src={exemplo4} alt="Evento 4" />
-                <h3 className="nome-evento">Show ABC</h3>
-                <p className="info-evento">Rio de Janeiro • 10 Jul 2025</p>
-              </div>
+              
+            
 
               <div className="card-evento">
                 <img src={exemplo5} alt="Evento 5" />
@@ -114,24 +99,14 @@ export const Homepage = () => {
                 <p className="info-evento">Rio de Janeiro • 10 Jul 2025</p>
               </div>
 
-              <div className="card-evento">
-                <img src={exemplo6} alt="Evento 6" />
-                <h3 className="nome-evento">Show ABC</h3>
-                <p className="info-evento">Rio de Janeiro • 10 Jul 2025</p>
-              </div>
-
+            
               <div className="card-evento">
                 <img src={exemplo7} alt="Evento 7" />
                 <h3 className="nome-evento">Show ABC</h3>
                 <p className="info-evento">Rio de Janeiro • 10 Jul 2025</p>
               </div>
 
-              <div className="card-evento">
-                <img src={exemplo8} alt="Evento 8" />
-                <h3 className="nome-evento">Show ABC</h3>
-                <p className="info-evento">Rio de Janeiro • 10 Jul 2025</p>
-              </div>
-
+           
               <div className="card-evento">
                 <img src={exemplo9} alt="Evento 9" />
                 <h3 className="nome-evento">Show ABC</h3>
@@ -168,12 +143,7 @@ export const Homepage = () => {
                 <p className="info-evento">Rio de Janeiro • 10 Jul 2025</p>
               </div>
 
-              <div className="card-evento">
-                <img src={exemplo15} alt="Evento 15" />
-                <h3 className="nome-evento">Show ABC</h3>
-                <p className="info-evento">Rio de Janeiro • 10 Jul 2025</p>
-              </div>
-
+          
             </div>
             <button className="seta direita">&#8250;</button>
           </div>

@@ -1,0 +1,3 @@
+export { PaginaEventosCompra } from "./PaginaCompraIngresso";
+
+

@@ -10,6 +10,7 @@ import { Signup } from "./pages/Signup";
 import { Signup_ADM } from "./pages/Signup_ADM";
 import { Dashboard } from "./pages/Dashboard";
 import { PaginaEventos } from "./pages/PaginaEventos";
+import { PaginaEventosCompra } from "./pages/PaginaEventosCompra";
 import { PaginaEventosVenda } from "./pages/PaginaEventosVenda";
 import '/styleguide.css';
 
@@ -30,6 +31,7 @@ const App = () => {
       <Route path="/signup_adm" element={<Signup_ADM />} />
       <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/PaginaEventos" element={<PaginaEventos />} />
+      <Route path="/Paginacompra" element={<PaginaEventosCompra />} />
       <Route path="/PaginaEventosVenda" element={<PaginaEventosVenda />} />
       
     </Routes>
