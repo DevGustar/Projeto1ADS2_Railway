@@ -90,11 +90,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 7px 30px;
+  padding: 10px 20px;
+  flex-wrap: wrap;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
-
-
+/* Botão hamburger */
 .hamburger {
   font-size: 28px;
   background: none;
@@ -108,33 +110,28 @@
 .nav-items {
   display: none;
   flex-direction: column;
+  align-items: flex-end;
   font-family: "Open Sans", Helvetica, sans-serif;
   width: 100%;
   gap: 10px;
   padding: 10px 0;
-
-}
-
-.nav-items a:hover {
-  color: #19c2bd;
-  /* Azul */
-  text-shadow: 0 0 6px #BBFBF9;
-  /* Sombra azul suave */
 }
 
 .nav-items a {
-  font-family: "Open Sans", Helvetica, sans-serif;
   font-size: 16px;
   color: #453f3f;
   text-decoration: none;
   text-align: right;
   transition: color 0.3s, font-weight 0.3s, text-shadow 0.3s;
-
   display: flex;
   align-items: center;
 }
 
-/* Mostrar menu quando aberto */
+.nav-items a:hover {
+  color: #19c2bd;
+  text-shadow: 0 0 6px #BBFBF9;
+}
+
 .nav-items.open {
   display: flex;
 }
@@ -148,50 +145,38 @@
   .nav-items {
     display: flex !important;
     flex-direction: row;
-    justify-content: right;
+    justify-content: flex-end;
+    align-items: center;
     gap: 20px;
+    width: auto;
     padding: 0;
   }
 
   .nav-items a {
     text-align: center;
   }
-
 }
 
-/* Responsividade para telas menores */
-@media (max-width: 767px) {
-  .top-bar {
-    grid-template-columns: repeat(5, 1fr);
-  }
-
-  .logo-area {
-    grid-column: 1 / 3;
-  }
-
-  .actions {
-    grid-column: 3 / 6;
-    gap: 10px;
-    justify-content: flex-start;
-  }
-
-  .nav-items {
-    display: none;
-  }
-
-  .hamburger {
-    display: block;
+/* Responsivo para telas menores */
+@media (max-width: 799px) {
+  .menu-bar {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .nav-items.open {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
+    width: 100%;
   }
 
   .nav-items a {
     font-size: 18px;
-    padding: 5px 0;
+    padding: 5px 10px;
+  }
+
+  .login-button,
+  .donate-button {
+    margin-top: 10px;
   }
 
   .login-button {

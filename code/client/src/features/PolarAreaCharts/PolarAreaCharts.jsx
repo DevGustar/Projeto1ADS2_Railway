@@ -3,6 +3,7 @@ import ReactApexChart from "react-apexcharts";
 
 const PolarAreaCharts = () => {
   const [state, setState] = React.useState({
+
     series: [14, 23, 21],
     options: {
       chart: {
@@ -19,6 +20,7 @@ const PolarAreaCharts = () => {
         style: {
           fontSize: '20px',
           fontWeight: 'bold',
+          fontFamily: undefined,
           color: '#263238'
         },
       },
@@ -45,9 +47,11 @@ const PolarAreaCharts = () => {
         show: true
       },
       labels: ['Palestra', 'Terapias', 'Doação'],
+      fill: {
+        opacity: 1,
+      },
     },
-  });
-
+  })
   return (
     <div>
       <ReactApexChart options={state.options} series={state.series} type="polarArea" width={380} />
@@ -55,4 +59,4 @@ const PolarAreaCharts = () => {
   );
 }
 
-export default PolarAreaCharts;
+export default PolarAreaCharts
