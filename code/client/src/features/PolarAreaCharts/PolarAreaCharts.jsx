@@ -47,9 +47,6 @@ const PolarAreaCharts = () => {
         show: true
       },
       labels: ['Palestra', 'Terapias', 'Doação'],
-      fill: {
-        opacity: 1,
-      },
     },
   })
   return (
